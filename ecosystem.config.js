@@ -3,8 +3,12 @@ module.exports = {
     name: 'voix-du-monde-arabe',
     script: 'npm',
     args: 'start',
-    cwd: '/root/project-5',
+    cwd: '/home/jd/project-5',
     env: {
+      NODE_ENV: 'production',
+      PORT: 3000
+    },
+    env_production: {
       NODE_ENV: 'production',
       PORT: 3000
     },
@@ -12,10 +16,10 @@ module.exports = {
     autorestart: true,
     watch: false,
     max_memory_restart: '1G',
-    // Supprimons temporairement les logs pour éviter les problèmes de permissions
-    // error_file: './logs/err.log',
-    // out_file: './logs/out.log',
-    // log_file: './logs/combined.log',
-    time: true
+    time: true,
+    // Redirection des logs vers des fichiers temporaires
+    error_file: '/tmp/voix-du-monde-arabe-error.log',
+    out_file: '/tmp/voix-du-monde-arabe-out.log',
+    log_file: '/tmp/voix-du-monde-arabe-combined.log'
   }]
 }
