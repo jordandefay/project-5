@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
     // Envoi de l'email de notification
     if (dbSuccess) {
       try {
-        const transporter = nodemailer.createTransporter(emailConfig)
+        const transporter = nodemailer.createTransport(emailConfig)
         
         const mailOptions = {
           from: `"Voix du Monde Arabe - Essai Gratuit" <${emailConfig.auth.user}>`,

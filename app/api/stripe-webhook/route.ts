@@ -113,7 +113,7 @@ async function handleSuccessfulPayment(session: Stripe.Checkout.Session) {
 
 async function sendNotificationEmail(metadata: any, session: Stripe.Checkout.Session) {
   try {
-    const transporter = nodemailer.createTransporter(emailConfig)
+    const transporter = nodemailer.createTransport(emailConfig)
     
     const emailSubject = `Nouvelle Inscription: ${metadata.courseName} - ${metadata.customerName}`
     
