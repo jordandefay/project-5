@@ -1,6 +1,0 @@
-{
-  "/api/create-checkout-session/route": "app/api/create-checkout-session/route.js",
-  "/page": "app/page.js",
-  "/inscription/page": "app/inscription/page.js",
-  "/cours/page": "app/cours/page.js"
-}
