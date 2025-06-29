@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours d'Essai Gratuit - Voix du Monde Arabe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <style>
+      .mobile-menu {
+        display: none;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center space-x-4">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="assets/logo.png"
+                alt="Logo de Voix du Monde Arabe"
+                class="h-16 w-auto sm:h-20"
+                onerror="this.onerror=null; this.src='https://placehold.co/100x80/f8fafc/eab308?text=Logo';"
+              />
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html#accueil"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Accueil</a
+            >
+            <a
+              href="tous_les_cours.html"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Nos Cours</a
+            >
+            <a
+              href="index.html#methode"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Méthode</a
+            >
+            <a
+              href="index.html#temoignages"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Témoignages</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Contact</a
+            >
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <button id="mobileMenuButton" class="md:hidden focus:outline-none">
+              <i class="fas fa-bars text-gray-800 text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobileMenu"
+        class="mobile-menu md:hidden bg-white shadow-lg pb-4"
+      >
+        <a
+          href="index.html#accueil"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Accueil</a
+        >
+        <a
+          href="tous_les_cours.html"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Nos Cours</a
+        >
+        <a
+          href="index.html#methode"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Méthode</a
+        >
+        <a
+          href="index.html#temoignages"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Témoignages</a
+        >
+        <a
+          href="index.html#contact"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Contact</a
+        >
+        <span
+          class="block py-2 px-4 text-sm text-amber-600 font-semibold cursor-default opacity-75"
+          >Essai Gratuit</span
+        >
+      </div>
+    </nav>
+
+    <section id="free-trial-section" class="py-16">
+      <div class="max-w-2xl mx-auto px-4">
+        <div class="text-center mb-10">
+          <i class="fas fa-gift text-5xl text-amber-600 mb-4"></i>
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            Demandez Votre Cours d'Essai Gratuit !
+          </h1>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            Découvrez notre méthode d'enseignement unique sans engagement.
+            Remplissez simplement le formulaire ci-dessous et nous vous
+            contacterons pour planifier votre session d'essai.
+          </p>
+        </div>
+
+        <form
+          id="essaiGratuitForm"
+          action="handle_essai_gratuit.php"
+          method="post"
+          class="bg-white p-8 rounded-lg shadow-lg"
+        >
+          <h3
+            class="text-xl font-semibold text-gray-700 mb-6 text-center border-b pb-4"
+          >
+            Vos Informations
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-5 mb-5">
+            <div>
+              <label
+                for="nom"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Nom <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+                placeholder="Votre nom de famille"
+              />
+            </div>
+            <div>
+              <label
+                for="prenom"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Prénom <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+                placeholder="Votre prénom"
+              />
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="date_naissance"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Date de naissance <span class="text-red-500">*</span></label
+            >
+            <input
+              type="date"
+              id="date_naissance"
+              name="date_naissance"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 text-gray-700"
+            />
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Email <span class="text-red-500">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+              placeholder="exemple@domaine.com"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label
+              for="whatsapp"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Numéro Whatsapp (avec indicatif)
+              <span class="text-red-500">*</span></label
+            >
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              required
+              placeholder="+33 XXXXXXXXX"
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+            />
+            <p class="mt-1 text-xs text-gray-500">
+              Utilisé pour vous contacter concernant le cours d'essai.
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <button
+              type="submit"
+              class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-4 rounded-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500"
+            >
+              Envoyer ma Demande d'Essai
+            </button>
+          </div>
+        </form>
+        <div
+          id="formMessageEssai"
+          class="mt-6 text-center p-4 rounded-md"
+        ></div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js" defer></script>
+    <script src="script_essai_gratuit.js"></script>
+  </body>
+</html>

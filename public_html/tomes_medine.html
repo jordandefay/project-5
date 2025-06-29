@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Les Tomes de Médine (1, 2, 3 & 4) - Objectifs - Voix du Monde Arabe
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_mobile.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <style>
+      .mobile-menu {
+        display: none;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
+      .objective-item {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInListItem 0.5s ease-out forwards;
+      }
+      @keyframes fadeInListItem {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      /* Délais pour Tome 1 */
+      .tome1-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .tome1-item:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .tome1-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .tome1-item:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .tome1-item:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .tome1-item:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+      /* Délais pour Tome 2 */
+      .tome2-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .tome2-item:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .tome2-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .tome2-item:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .tome2-item:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .tome2-item:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+      /* Délais pour Tome 3 */
+      .tome3-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .tome3-item:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .tome3-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .tome3-item:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .tome3-item:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .tome3-item:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+      /* Délais pour Tome 4 */
+      .tome4-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .tome4-item:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .tome4-item:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .tome4-item:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .tome4-item:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .tome4-item:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+      .tome4-item:nth-child(7) {
+        animation-delay: 0.7s;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center space-x-4">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="assets/logo1.png"
+                alt="Logo de Voix du Monde Arabe"
+                class="h-20 sm:h-24 w-auto"
+                onerror="this.onerror=null; this.src='https://placehold.co/120x96/f8fafc/eab308?text=Logo';"
+              />
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html#accueil"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Accueil</a
+            >
+            <a
+              href="tous_les_cours.html"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Nos Cours</a
+            >
+            <a
+              href="index.html#guide-apprentissage"
+              class="text-amber-600 font-semibold transition"
+              >Guide d'Apprentissage</a
+            >
+            <a
+              href="index.html#methode"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Méthode</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="essai_gratuit.html"
+              class="bg-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-700 transition text-sm sm:text-base"
+              >Essai Gratuit</a
+            >
+            <button id="mobileMenuButton" class="md:hidden focus:outline-none">
+              <i class="fas fa-bars text-gray-800 text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobileMenu"
+        class="mobile-menu md:hidden bg-white shadow-lg pb-4"
+      >
+        <a
+          href="index.html#accueil"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Accueil</a
+        >
+        <a
+          href="tous_les_cours.html"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Nos Cours</a
+        >
+        <a
+          href="index.html#guide-apprentissage"
+          class="block py-2 px-4 text-sm text-amber-600 font-semibold hover:bg-amber-50 transition"
+          >Guide d'Apprentissage</a
+        >
+        <a
+          href="index.html#methode"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Méthode</a
+        >
+        <a
+          href="index.html#contact"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Contact</a
+        >
+        <a
+          href="essai_gratuit.html"
+          class="block py-2 px-4 text-sm text-amber-600 font-semibold hover:bg-amber-50 transition"
+          >Essai Gratuit</a
+        >
+      </div>
+    </nav>
+
+    <section id="tomes-medine-page" class="py-16 md:py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <header class="text-center mb-12 md:mb-16">
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Objectifs Généraux du Tome 1
+          </h1>
+          <p class="text-xl text-blue-600 font-semibold">
+            Méthode d'Arabe de l'Université de Médine
+          </p>
+        </header>
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-lg">
+          <p class="text-gray-700 mb-8 text-center md:text-left">
+            Ce premier tome d'une série pour l'apprentissage de l'arabe vise à
+            établir les bases fondamentales de la langue. À la fin de ce volume,
+            l'apprenant devrait être capable de&nbsp;:
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start objective-item tome1-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-spell-check text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Maîtriser l'alphabet arabe
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Reconnaître, lire et écrire les lettres arabes sous leurs
+                  différentes formes (initiale, médiale, finale, isolée).
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome1-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-book-open text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Comprendre et utiliser le vocabulaire de base
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Acquérir un vocabulaire courant relatif aux objets du
+                  quotidien, aux personnes et aux lieux.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome1-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-pen-alt text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Former des phrases simples
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Construire et comprendre des phrases simples en utilisant des
+                  structures de base.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome1-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-comments text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Poser et répondre à des questions simples
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Être capable de poser des questions élémentaires et d'y
+                  répondre.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome1-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-glasses text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Développer les compétences de lecture et d'écriture de base
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Lire et écrire des mots et des phrases courtes.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome1-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-sitemap text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Acquérir une compréhension élémentaire de la grammaire arabe
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Identifier et utiliser les articles définis ("al-").
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="my-12 md:my-16 border-gray-300" />
+
+        <header class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Objectifs Généraux du Tome 2
+          </h2>
+          <p class="text-xl text-blue-600 font-semibold">
+            Méthode d'Arabe de l'Université de Médine
+          </p>
+        </header>
+
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-lg">
+          <p class="text-gray-700 mb-8 text-center md:text-left">
+            Le Tome 2 des "Leçons de Langue Arabe pour Non-Arabophones" s'appuie
+            sur les fondations du premier volume pour approfondir la
+            compréhension et l'utilisation de la langue arabe. À travers ce
+            tome, l'étudiant développera les capacités suivantes&nbsp;:
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start objective-item tome2-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-layer-group text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Approfondir la grammaire avec `إِنَّ` et ses dérivés
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Maîtriser l'utilisation de `إِنَّ` (certes) avec les pronoms,
+                  et comprendre l'emploi de ses "sœurs" comme `لَعَلَّ`
+                  (peut-être) pour l'espoir, `كَأَنَّ` (comme si) pour la
+                  comparaison, et `لَكِنَّ` (mais) pour l'opposition. (Basé sur
+                  les leçons initiales du Tome 2 de la méthode de Médine)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome2-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-ban text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Maîtriser la négation avec `لَيْسَ`
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Former des phrases négatives en utilisant `لَيْسَ` (ne pas
+                  être) avec ses différentes conjugaisons et la préposition
+                  `بِ`. (Basé sur les leçons initiales du Tome 2 de la méthode
+                  de Médine)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome2-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-exchange-alt text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Exprimer la comparaison et le superlatif
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Construire des phrases comparatives (ex: `أَطْوَلُ مِنْ` -
+                  plus grand que) et superlatives (ex: `أَطْوَلُ طَالِبٍ` -
+                  l'étudiant le plus grand). (Basé sur les leçons initiales du
+                  Tome 2 de la méthode de Médine)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome2-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-sort-numeric-down text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Utiliser les nombres de 11 à 20 et au-delà
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Compter et utiliser les nombres cardinaux (ex: `خَمْسَةَ
+                  عَشَرَ طَالِبًا` - quinze étudiants) et se familiariser avec
+                  les centaines et milliers. (Basé sur les leçons initiales du
+                  Tome 2 de la méthode de Médine)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome2-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-comments text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Enrichir son vocabulaire thématique
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Acquérir des mots relatifs à la description, la nationalité,
+                  les objets, la famille, les lieux, les études et l'université.
+                  (Basé sur les leçons initiales du Tome 2 de la méthode de
+                  Médine)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome2-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-question-circle text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Développer la conversation et la compréhension
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Participer à des dialogues sur des sujets quotidiens,
+                  comprendre et poser des questions sur l'identité, l'origine,
+                  et la famille. (Basé sur les leçons initiales du Tome 2 de la
+                  méthode de Médine)
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-8">
+            Remarque : Ces objectifs sont synthétisés à partir des premières
+            leçons du Tome 2 et ne couvrent pas l'intégralité du volume. La
+            progression complète du Tome 2 introduit de nombreux autres points
+            de grammaire et de vocabulaire avancés.
+          </p>
+        </div>
+
+        <hr class="my-12 md:my-16 border-gray-300" />
+
+        <header class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Objectifs Généraux du Tome 3
+          </h2>
+          <p class="text-xl text-blue-600 font-semibold">
+            Méthode d'Arabe de l'Université de Médine
+          </p>
+        </header>
+
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-lg">
+          <p class="text-gray-700 mb-8 text-center md:text-left">
+            Le Tome 3 approfondit l'étude de la grammaire arabe (الإعراب – la
+            déclinaison) et introduit des concepts plus avancés. En progressant
+            dans ce volume, l'étudiant visera à&nbsp;:
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start objective-item tome3-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-balance-scale-right text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Comprendre l'الإعراب (déclinaison) et البناء (non-déclinaison)
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Distinguer les noms déclinables (المُعْرَب) dont la
+                  terminaison change selon leur fonction, des noms
+                  non-déclinables (المَبْنِي) à terminaison fixe. (Basé sur la
+                  leçon 1 du Tome 3)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome3-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-puzzle-piece text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Identifier les noms non-déclinables (الأسماء المبنية)
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Reconnaître les principales catégories de noms non-déclinables
+                  tels que les pronoms, noms démonstratifs, relatifs,
+                  interrogatifs, certains adverbes et nombres composés. (Basé
+                  sur la leçon 1 du Tome 3)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome3-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-star text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Maîtriser les signes de déclinaison originaux (العلامات
+                  الأصلية)
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Appliquer correctement la Damma (nominatif), Fatha (accusatif)
+                  et Kasra (génitif) pour les noms standards. (Basé sur la leçon
+                  1 du Tome 3)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome3-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-cogs text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Appliquer les signes de déclinaison dérivés (العلامات الفرعية)
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Utiliser les signes spécifiques pour le duel, le pluriel
+                  masculin et féminin réguliers, les "Cinq Noms" (الأسماء
+                  الخمسة) et les diptotes (الممنوع من الصرف). (Basé sur la leçon
+                  1 du Tome 3)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome3-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-eye-slash text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Comprendre la déclinaison estimée (الإعراب التقديري)
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Reconnaître les cas où les voyelles de déclinaison sont
+                  sous-entendues pour les noms Maqsour (finissant par Alif),
+                  Manqous (finissant par Ya), et les noms annexés à ياء المتكلم.
+                  (Basé sur la leçon 1 du Tome 3)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome3-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-tasks text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Analyser et appliquer l'I'rab
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  S'exercer à identifier les cas et les fonctions des mots dans
+                  les phrases et à appliquer les règles de déclinaison
+                  correspondantes. (Basé sur les exercices du Tome 3)
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-8">
+            Remarque : Ces objectifs sont basés sur les concepts fondamentaux de
+            l'I'rab introduits au début du Tome 3. Ce volume explore ces sujets
+            et bien d'autres aspects de la grammaire arabe de manière beaucoup
+            plus détaillée.
+          </p>
+        </div>
+
+        <hr class="my-12 md:my-16 border-gray-300" />
+
+        <header class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Objectifs Généraux du Tome 4
+          </h2>
+          <p class="text-xl text-blue-600 font-semibold">
+            Méthode d'Arabe de l'Université de Médine (Niveau 4)
+          </p>
+        </header>
+
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-lg">
+          <p class="text-gray-700 mb-8 text-center md:text-left">
+            Le Tome 4 (Niveau 4) de la méthode "Leçons de Langue Arabe pour
+            Non-Arabophones" continue de bâtir sur les connaissances acquises,
+            introduisant des structures verbales plus complexes et des nuances
+            linguistiques. Les objectifs pour l'étudiant incluent&nbsp;:
+          </p>
+          <ul class="space-y-6">
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-exchange-alt text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Maîtriser les verbes transitifs et intransitifs
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Différencier et utiliser correctement les verbes nécessitant
+                  un complément d'objet direct (المُتَعَدِّي) de ceux n'en ayant
+                  pas besoin (اللَّازِم). Apprendre à rendre un verbe
+                  intransitif transitif via une préposition ou par changement de
+                  forme (schèmes أَفْعَلَ, فَعَّلَ). (Basé sur la leçon 1 du
+                  Tome 4)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-cogs text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Utiliser les formes verbales dérivées et leurs significations
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Étudier le schème أَفْعَلَ (causatif), le schème فَعَّلَ
+                  (intensif/causatif), et comprendre l'usage du verbe أَرَى
+                  (montrer) avec ses deux compléments d'objet. (Basé sur la
+                  leçon 1 du Tome 4)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-bullseye text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Exprimer l'objectif avec `لِـ` + Subjonctif
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Apprendre à formuler la cause ou le but d'une action en
+                  utilisant la préposition `لِـ` suivie d'un verbe au subjonctif
+                  (mansûb), comme dans "أَخْرَجْتُهَا لِأُنَظِّفَهَا" (je l'ai
+                  sortie pour la nettoyer). (Basé sur la leçon 1 du Tome 4)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-exclamation-triangle text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Employer les constructions d'avertissement
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Utiliser des expressions comme "إِيَّاكَ وَ..." (Prends garde
+                  à...) pour mettre en garde contre quelque chose. (Basé sur la
+                  leçon 1 du Tome 4)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-lock text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Comprendre l'emphase et la restriction avec `إِنَّمَا`
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Saisir la nuance de restriction apportée par `إِنَّمَا`
+                  (seulement, ne...que) et son impact sur la phrase. (Basé sur
+                  la leçon 1 du Tome 4)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-moon text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Utiliser les "sœurs de كَانَ" telles que `أَمْسَى`
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Apprendre le fonctionnement de `أَمْسَى` (devenir/être le
+                  soir) et d'autres verbes similaires qui modifient la phrase
+                  nominale. (Basé sur la leçon 1 du Tome 4)
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start objective-item tome4-item">
+              <span
+                class="flex-shrink-0 bg-blue-100 text-blue-600 p-3 rounded-full mr-4 mt-1"
+                ><i class="fas fa-microphone-alt text-xl"></i
+              ></span>
+              <div>
+                <h3 class="font-semibold text-lg text-gray-800 mb-1">
+                  Perfectionner la prononciation et l'expression
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Porter une attention continue à la prononciation correcte,
+                  notamment des lettres spécifiques (ث, ذ, ظ), et améliorer sa
+                  fluidité en participant à des dialogues et des discussions.
+                  (Basé sur la leçon 1 du Tome 4)
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 mt-8">
+            Remarque : Ces objectifs sont une introduction aux concepts abordés
+            dans les premières leçons du Tome 4. Ce volume explore ces sujets et
+            de nombreux autres points de grammaire et d'éloquence de manière
+            approfondie.
+          </p>
+        </div>
+        <div class="mt-12 md:mt-16 text-center">
+          <a
+            href="inscription_cours.html?courseId=kitab-medine"
+            class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-md font-medium transition ease-in-out duration-150 text-base"
+          >
+            Inscription aux Tomes de Médine
+          </a>
+          <p class="mt-4 text-sm text-gray-600">
+            Ou
+            <a
+              href="index.html#guide-apprentissage"
+              class="text-blue-600 hover:underline"
+              >retourner au Guide d'Apprentissage</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

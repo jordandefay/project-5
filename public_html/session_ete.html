@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Inscription Session Été - Cours d'Arabe Hommes/Ados - Voix du Monde Arabe
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <style>
+      .mobile-menu {
+        display: none;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
+      #paypal-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.25rem; /* mt-5 */
+      }
+      select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center space-x-4">
+            <a href="index.html" class="flex items-center">
+              <img
+                src="assets/logo1.png"
+                alt="Logo de Voix du Monde Arabe"
+                class="h-20 sm:h-24 w-auto"
+                onerror="this.onerror=null; this.src='https://placehold.co/120x96/f8fafc/eab308?text=Logo';"
+              />
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html#accueil"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Accueil</a
+            >
+            <a
+              href="tous_les_cours.html"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Nos Cours</a
+            >
+            <a
+              href="index.html#guide-apprentissage"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Guide d'Apprentissage</a
+            >
+            <a
+              href="index.html#methode"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Méthode</a
+            >
+            <a
+              href="index.html#contact"
+              class="text-gray-800 hover:text-amber-600 transition"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="essai_gratuit.html"
+              class="bg-amber-600 text-white px-4 py-2 rounded-md hover:bg-amber-700 transition text-sm sm:text-base"
+              >Essai Gratuit</a
+            >
+            <button id="mobileMenuButton" class="md:hidden focus:outline-none">
+              <i class="fas fa-bars text-gray-800 text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobileMenu"
+        class="mobile-menu md:hidden bg-white shadow-lg pb-4"
+      >
+        <a
+          href="index.html#accueil"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Accueil</a
+        >
+        <a
+          href="tous_les_cours.html"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Nos Cours</a
+        >
+        <a
+          href="index.html#guide-apprentissage"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Guide d'Apprentissage</a
+        >
+        <a
+          href="index.html#methode"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Méthode</a
+        >
+        <a
+          href="index.html#contact"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-amber-50 hover:text-amber-600 transition"
+          >Contact</a
+        >
+        <a
+          href="essai_gratuit.html"
+          class="block py-2 px-4 text-sm text-amber-600 font-semibold hover:bg-amber-50 transition"
+          >Essai Gratuit</a
+        >
+      </div>
+    </nav>
+
+    <main class="py-12 md:py-16">
+      <div class="max-w-3xl mx-auto px-4">
+        <header class="mb-10 text-center">
+          <img
+            src="assets/logo1.png"
+            alt="Voix du Monde Arabe"
+            class="h-24 w-auto mx-auto mb-4"
+            onerror="this.onerror=null; this.src='https://placehold.co/100x100/f8fafc/eab308?text=LogoVMDA';"
+          />
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
+            Inscription Session Été
+          </h1>
+          <p class="text-xl text-amber-600 font-semibold">
+            Cours d'Arabe Adultes/Ados/Enfants (dès 7 ans)
+          </p>
+          <p class="text-gray-600 mt-2">
+            Session intensive d'un mois (2h/semaine).
+          </p>
+        </header>
+
+        <div
+          class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-md mb-8 shadow"
+        >
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <i class="fas fa-info-circle text-amber-500 fa-lg"></i>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-amber-700">
+                Les frais d'inscription sont
+                <strong class="font-semibold">GRATUITS</strong> ! <br />Limite d'inscription :
+                <strong class="font-semibold">10 juillet</strong>. Places limitées (victime de son succès)
+                !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form
+          id="sessionEteForm"
+          class="bg-white p-6 md:p-8 rounded-lg shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold text-gray-700 mb-6 border-b pb-3">
+            Complétez votre inscription
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5">
+            <div>
+              <label
+                for="nom"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Nom <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+                placeholder="Votre nom"
+              />
+            </div>
+            <div>
+              <label
+                for="prenom"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Prénom <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+                placeholder="Votre prénom"
+              />
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="date_naissance"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Date de naissance <span class="text-red-500">*</span></label
+            >
+            <input
+              type="date"
+              id="date_naissance"
+              name="date_naissance"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 text-gray-700"
+            />
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Email <span class="text-red-500">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+              placeholder="exemple@domaine.com"
+            />
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="whatsapp"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Numéro Whatsapp (avec indicatif)
+              <span class="text-red-500">*</span></label
+            >
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              required
+              placeholder="+33 XXXXXXXXX"
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 placeholder-gray-400"
+            />
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="creneau"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Choix du Créneau (5 semaines)
+              <span class="text-red-500">*</span></label
+            >
+            <select
+              id="creneau"
+              name="creneau"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 bg-white"
+            >
+              <option value="">Sélectionnez un créneau</option>
+              <option value="creneau2">Créneau 1: 30 juin - 3 août</option>
+              <option value="creneau3">Créneau 2: 14 juillet - 17 août</option>
+            </select>
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="niveau_enseignement"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Niveau d'Enseignement <span class="text-red-500">*</span></label
+            >
+            <select
+              id="niveau_enseignement"
+              name="niveau_enseignement"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 bg-white"
+            >
+              <option value="">Sélectionnez un niveau</option>
+              <option value="alphabétisation">
+                Débutant (Alphabétisation)
+              </option>
+              <option value="kitab-medine">
+                Programme "Tomes de Médine"
+              </option>
+              <option value="al-forqane">Programme "Al-Forqane"</option>
+            </select>
+          </div>
+
+          <div class="mb-5">
+            <label
+              for="type_groupe"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Type de Groupe (Tarif/mois)
+              <span class="text-red-500">*</span></label
+            >
+            <select
+              id="type_groupe"
+              name="type_groupe"
+              required
+              class="w-full px-4 py-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-amber-500 focus:border-amber-500 bg-white"
+            >
+              <option value="">Sélectionnez un type de groupe</option>
+              <option value="73.90" data-label="SOLO (1 personne)">
+                SOLO (1 personne) - 73.90€/mois
+              </option>
+              <option value="68.90" data-label="DUO (2 personnes)">
+                DUO (2 personnes) - 68.90€/mois
+              </option>
+              <option value="63.90" data-label="TRIO (3 personnes)">
+                TRIO (3 personnes) - 63.90€/mois
+              </option>
+              <option value="53.90" data-label="QUATRO (4 personnes)">
+                QUATRO (4 personnes) - 53.90€/mois
+              </option>
+            </select>
+          </div>
+
+          <div id="supportPdfSection" class="mb-6">
+            <label for="support_pdf" class="flex items-center">
+              <input
+                type="checkbox"
+                id="support_pdf"
+                name="support_pdf"
+                class="h-4 w-4 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+              />
+              <span class="ml-2 text-sm text-gray-700"
+                >Ajouter les supports PDF Al-Forqane (+10€, paiement
+                unique)</span
+              >
+            </label>
+            <p class="mt-1 text-xs text-gray-500">
+              Les supports PDF sont obligatoires (et donc inclus) si vous
+              choisissez le niveau "Programme Al-Forqane".
+            </p>
+          </div>
+
+          <div class="mt-6 p-4 bg-amber-50 rounded-md">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
+              Récapitulatif du Paiement
+            </h3>
+            <p class="text-gray-600">
+              Tarif mensuel du groupe : <strong id="tarifMensuel">-- €</strong>
+            </p>
+            <p class="text-gray-600">
+              Supports PDF : <strong id="tarifPdf">0 €</strong>
+            </p>
+            <p class="text-xl font-bold text-amber-700 mt-1">
+              Total pour le premier mois :
+              <strong id="totalAPayer">-- €</strong>
+            </p>
+            <p class="text-xs text-gray-500 mt-1">
+              Le tarif mensuel sera appliqué pour la durée de la session (1
+              mois).
+            </p>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <h3 class="text-xl font-semibold text-gray-700 mb-4">
+              Paiement Sécurisé
+            </h3>
+            <div
+              id="paypal-message-container"
+              class="mb-4 text-center"
+              data-pp-message
+              data-pp-placement="payment"
+              data-pp-amount=""
+              data-pp-style-layout="text"
+              data-pp-style-logo-type="inline"
+              data-pp-style-text-color="black"
+            ></div>
+            <div id="paypal-button-container"></div>
+            <div
+              id="result-message"
+              class="mt-4 text-center p-2 rounded-md"
+            ></div>
+            <p class="text-xs text-gray-500 mt-2 text-center">
+              Vous pouvez régler par PayPal ou par Carte Bancaire via PayPal.
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <button
+              type="submit"
+              disabled
+              class="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-4 rounded-md transition duration-150 ease-in-out opacity-50 cursor-not-allowed"
+              id="submitButtonSessionEte"
+            >
+              Finaliser l'inscription (Paiement requis)
+            </button>
+          </div>
+        </form>
+        <div
+          id="formMessageSessionEte"
+          class="mt-6 text-center p-4 rounded-md"
+        ></div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=AWnDMMLcrR0y-wTjmjjobKCMqwmlhlCQEHOHqi2BHRofbvE8qc9GY4Vt6yi9SxjSPJPdGtlUwCf6XkK3&currency=EUR&components=buttons,messages&disable-funding=card,sofort"
+      data-namespace="PayPalSDK"
+    ></script>
+    <script src="script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("sessionEteForm");
+        const niveauEnseignementSelect = document.getElementById(
+          "niveau_enseignement"
+        );
+        const typeGroupeSelect = document.getElementById("type_groupe");
+        const supportPdfCheckbox = document.getElementById("support_pdf");
+        const supportPdfSection = document.getElementById("supportPdfSection"); // Pour montrer/cacher
+        const tarifMensuelEl = document.getElementById("tarifMensuel");
+        const tarifPdfEl = document.getElementById("tarifPdf");
+        const totalAPayerEl = document.getElementById("totalAPayer");
+        const paypalButtonContainer = document.getElementById(
+          "paypal-button-container"
+        );
+        const paypalMessageContainer = document.getElementById(
+          "paypal-message-container"
+        );
+        const submitButton = document.getElementById("submitButtonSessionEte");
+        const formMessage = document.getElementById("formMessageSessionEte");
+        const resultMessageContainer =
+          document.getElementById("result-message");
+
+        let currentTotalAmount = 0;
+        let currentItemName = "Session Été Hommes/Ados";
+
+        function resultMessage(message, isError = false) {
+          if (resultMessageContainer) {
+            resultMessageContainer.innerHTML = message;
+            resultMessageContainer.className = isError
+              ? "mt-2 text-center p-2 rounded-md bg-red-100 text-red-700 text-sm"
+              : "mt-2 text-center p-2 rounded-md bg-green-100 text-green-700 text-sm";
+          }
+        }
+
+        function updateTotalAndPayPal() {
+          let basePrice = parseFloat(typeGroupeSelect.value) || 0;
+          let pdfPrice = 0;
+          const selectedNiveau = niveauEnseignementSelect.value;
+
+          if (selectedNiveau === "al-forqane") {
+            supportPdfCheckbox.checked = true;
+            supportPdfCheckbox.disabled = true;
+            pdfPrice = 10;
+            if (supportPdfSection) supportPdfSection.style.display = "block";
+          } else {
+            supportPdfCheckbox.checked = false;
+            supportPdfCheckbox.disabled = true; // Désactivé aussi pour alphabétisation
+            pdfPrice = 0;
+            // Optionnel: cacher la section PDF si ce n'est pas Al-Forqane
+            // if(supportPdfSection) supportPdfSection.style.display = 'none';
+          }
+
+          currentTotalAmount = basePrice + pdfPrice;
+
+          if (tarifMensuelEl)
+            tarifMensuelEl.textContent = `${basePrice.toFixed(2)} €`;
+          if (tarifPdfEl) tarifPdfEl.textContent = `${pdfPrice.toFixed(2)} €`;
+          if (totalAPayerEl)
+            totalAPayerEl.textContent = `${currentTotalAmount.toFixed(2)} €`;
+
+          const selectedGroupeOption =
+            typeGroupeSelect.options[typeGroupeSelect.selectedIndex];
+          const selectedNiveauOption =
+            niveauEnseignementSelect.options[
+              niveauEnseignementSelect.selectedIndex
+            ];
+
+          let itemNameDetail = "Session Été";
+          if (selectedNiveauOption && selectedNiveauOption.value) {
+            itemNameDetail += ` - ${selectedNiveauOption.text}`;
+          }
+          if (selectedGroupeOption && selectedGroupeOption.dataset.label) {
+            itemNameDetail += ` (${selectedGroupeOption.dataset.label})`;
+          }
+          if (supportPdfCheckbox.checked && selectedNiveau === "al-forqane") {
+            itemNameDetail += " + Supports PDF";
+          }
+          currentItemName = itemNameDetail;
+
+          if (paypalMessageContainer) {
+            paypalMessageContainer.setAttribute(
+              "data-pp-amount",
+              currentTotalAmount.toFixed(2)
+            );
+            if (typeof PayPalSDK !== "undefined" && PayPalSDK.Messages) {
+              PayPalSDK.Messages().render("#paypal-message-container");
+            }
+          }
+
+          if (
+            currentTotalAmount > 0 &&
+            typeof PayPalSDK !== "undefined" &&
+            PayPalSDK.Buttons &&
+            paypalButtonContainer
+          ) {
+            renderPayPalButtonsSessionEte(
+              currentTotalAmount.toFixed(2),
+              "EUR",
+              currentItemName
+            );
+          } else if (paypalButtonContainer) {
+            paypalButtonContainer.innerHTML =
+              currentTotalAmount <= 0 && selectedNiveau
+                ? '<p class="text-gray-500 text-center">Veuillez sélectionner un type de groupe.</p>'
+                : "";
+          }
+        }
+
+        if (niveauEnseignementSelect)
+          niveauEnseignementSelect.addEventListener(
+            "change",
+            updateTotalAndPayPal
+          );
+        if (typeGroupeSelect)
+          typeGroupeSelect.addEventListener("change", updateTotalAndPayPal);
+        // L'event listener sur supportPdfCheckbox n'est plus nécessaire si on le gère via le niveau.
+        // Mais si on veut le rendre optionnel pour Al-Forqane (contraire au flyer), il faudrait le réactiver.
+
+        function renderPayPalButtonsSessionEte(amount, currency, itemName) {
+          if (!amount || !currency || !itemName || parseFloat(amount) <= 0) {
+            paypalButtonContainer.innerHTML =
+              "<p class='text-red-500 text-center'>Erreur de configuration.</p>";
+            return;
+          }
+          if (
+            typeof PayPalSDK === "undefined" ||
+            typeof PayPalSDK.Buttons !== "function"
+          ) {
+            paypalButtonContainer.innerHTML =
+              "<p class='text-red-500 text-center'>SDK PayPal non prêt.</p>";
+            return;
+          }
+          paypalButtonContainer.innerHTML = "";
+          PayPalSDK.Buttons({
+            style: {
+              shape: "rect",
+              layout: "vertical",
+              color: "gold",
+              label: "paypal",
+            },
+            createOrder: function (data, actions) {
+              return actions.order.create({
+                purchase_units: [
+                  {
+                    description: itemName,
+                    amount: { currency_code: currency, value: amount },
+                  },
+                ],
+              });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (details) {
+                resultMessage(
+                  `Paiement de ${details.purchase_units[0].amount.value} ${details.purchase_units[0].amount.currency_code} réussi par ${details.payer.name.given_name} ! (ID: ${details.id})<br>Vous pouvez soumettre votre inscription.`,
+                  false
+                );
+                if (submitButton) {
+                  submitButton.disabled = false;
+                  submitButton.classList.remove(
+                    "opacity-50",
+                    "cursor-not-allowed"
+                  );
+                }
+                const transIdInput = document.createElement("input");
+                transIdInput.type = "hidden";
+                transIdInput.name = "paypalTransactionId";
+                transIdInput.value = details.id;
+                form.appendChild(transIdInput);
+              });
+            },
+            onError: function (err) {
+              resultMessage(`Erreur PayPal: ${err.toString()}`, true);
+            },
+          })
+            .render("#paypal-button-container")
+            .catch((err) => {
+              resultMessage(`Erreur rendu boutons: ${err.toString()}`, true);
+            });
+        }
+
+        updateTotalAndPayPal(); // Appel initial
+
+        if (form) {
+          form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            if (submitButton.disabled) {
+              resultMessage("Veuillez d'abord compléter le paiement.", true);
+              return;
+            }
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            data.totalPaye = currentTotalAmount.toFixed(2);
+            data.devise = "EUR";
+            data.descriptionAchat = currentItemName;
+
+            // Récupérer l'ID de transaction PayPal s'il a été ajouté
+            const paypalTransactionIdField = form.querySelector(
+              'input[name="paypalTransactionId"]'
+            );
+            data.paypalTransactionId = paypalTransactionIdField
+              ? paypalTransactionIdField.value
+              : "N/A_CLIENT_PAYMENT";
+
+            console.log("Données d'inscription Session Été à envoyer:", data);
+            resultMessage("Envoi de l'inscription...", false);
+
+            try {
+              // Remplacer par votre endpoint réel si vous en avez un, sinon c'est une simulation
+              // const response = await fetch('handle_session_ete.php', {
+              //     method: 'POST',
+              //     headers: { 'Content-Type': 'application/json' },
+              //     body: JSON.stringify(data)
+              // });
+              // const phpResult = await response.json();
+              // if (phpResult.status === 'success') {
+              //     resultMessage(phpResult.message || 'Inscription réussie !', false);
+              // } else {
+              //     resultMessage(phpResult.message || 'Erreur serveur.', true);
+              // }
+              setTimeout(() => {
+                // Simulation d'un appel serveur
+                resultMessage(
+                  "Merci ! Votre inscription pour la session d'été a bien été enregistrée (simulation). Nous vous contacterons bientôt.",
+                  false
+                );
+                form.reset();
+                updateTotalAndPayPal();
+                submitButton.disabled = true;
+                submitButton.classList.add("opacity-50", "cursor-not-allowed");
+                if (paypalTransactionIdField) paypalTransactionIdField.remove(); // Nettoyer le champ caché
+              }, 1000);
+            } catch (error) {
+              console.error("Erreur soumission formulaire session été:", error);
+              resultMessage("Erreur de communication avec le serveur.", true);
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
